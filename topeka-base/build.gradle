@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.feature'
 
 android {
+    baseFeature = true // Instant app shit
     buildToolsVersion '26.0.1'
     compileSdkVersion 26
 
@@ -25,7 +26,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.google.samples.apps.topeka"
+//        applicationId "com.google.samples.apps.topeka" // Should be removed in instant app
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
@@ -35,7 +36,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
         }
     }
 
